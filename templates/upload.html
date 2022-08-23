@@ -1,0 +1,54 @@
+<html>
+   <head>
+      <title></title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script>
+         $(document).ready(function() {
+            $('#loadingImg').hide();
+            $("#but_upload").click(function() {
+                var fd = new FormData();
+                var files = $('#file')[0].files[0];
+                fd.append('file', files);
+                $.ajax({
+                    url: 'success',
+                    beforeSend:function() {
+                        $('#loadingImg').show();
+                     },
+                     error:function(response) {
+                        $('#loadingImg').hide();
+                     },
+                    type: 'post',
+                    data: fd,
+                    contentType: false,
+                    processData: false,
+                    success: function(response){
+                        $('#loadingImg').hide();
+                        if(response != 0){
+                           //alert('file uploaded');
+                           $("#outputSpan").html(response);
+                        }
+                        else{
+                            alert('file not uploaded');
+                        }
+                    },
+                });
+            });
+        });
+      </script>
+   </head>
+   <body>
+      <h1 style="background-color: #607ee0;">Welcome to Online Compiler by TANISHQ RAWAT</h1>
+      <div style="float: left;width: 50%;height: 100%;background-color: aliceblue;">
+         <h3>Upload Source Code</h3>
+         <input type = "file" id = "file" name = "file" />
+         <h5>Click Submit Button to Execute Source Code</h5>
+         <input id="but_upload" value="Upload" type = "button"></input><br>
+      </div>
+      <div style="height: auto;height: 100%;background-color: antiquewhite;">
+         <center><b>Result Section</b></center>
+         <center><img name="loadingImage" id="loadingImg" src="http://www.ppimusic.ie/images/loading_anim.gif "  width="100px" height="100px" /></center>
+         <span id="outputSpan">
+         </span>
+      </div>
+   </body>
+</html>
