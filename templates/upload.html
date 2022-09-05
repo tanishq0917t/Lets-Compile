@@ -8,7 +8,9 @@
             $("#but_upload").click(function() {
                 var fd = new FormData();
                 var files = $('#file')[0].files[0];
+                var inputfile = $('#inputFile')[0].files[0];
                 fd.append('file', files);
+                fd.append('inputFile', inputfile);
                 $.ajax({
                     url: 'success',
                     beforeSend:function() {
@@ -41,6 +43,8 @@
       <div style="float: left;width: 50%;height: 100%;background-color: aliceblue;">
          <h3>Upload Source Code</h3>
          <input type = "file" id = "file" name = "file" />
+         <h3>Upload Input File</h3>
+         <input type = "file" id = "inputFile" name = "inputFile" />
          <h5>Click Submit Button to Execute Source Code</h5>
          <input id="but_upload" value="Upload" type = "button"></input><br>
       </div>

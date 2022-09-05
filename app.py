@@ -20,13 +20,23 @@ def success():
     if request.method == 'POST':
         f = request.files['file']
         f.save(f.filename)
+        isThereAnyInputFile=True
+        try:
+            fi = request.files['inputFile']
+            fi.save(fi.filename)
+        except:
+            isThereAnyInputFile=False
         ot=""
         if(f.filename.endswith(".c")):
             with open("output.txt","w+") as outputFile:
                 with open("error.txt","w+") as errorFile:
                     subprocess.run(["gcc",f.filename,"-o",f.filename[:-2]+".out"],stdout=outputFile,stderr=errorFile)
                     if os.stat("error.txt").st_size==0:
-                        subprocess.run(["./"+f.filename[:-2]+".out"],stdout=outputFile,stderr=errorFile)
+                        if isThereAnyInputFile:
+                            with open(fi.filename,"r") as inputContent:
+                                subprocess.run(["./"+f.filename[:-2]+".out"],stdout=outputFile,stderr=errorFile,stdin=inputContent)
+                        else:
+                            subprocess.run(["./"+f.filename[:-2]+".out"],stdout=outputFile,stderr=errorFile)
                         outputFile.close()
                         with open("output.txt") as outputFile:
                             with open("ot.txt","w+") as otFile:
@@ -57,7 +67,11 @@ def success():
                 with open("error.txt","w+") as errorFile:
                     subprocess.run(["g++",f.filename,"-o",f.filename[:-2]+".out"],stdout=outputFile,stderr=errorFile)
                     if os.stat("error.txt").st_size==0:
-                        subprocess.run(["./"+f.filename[:-2]+".out"],stdout=outputFile,stderr=errorFile)
+                        if isThereAnyInputFile:
+                            with open(fi.filename,"r") as inputContent:
+                                subprocess.run(["./"+f.filename[:-2]+".out"],stdout=outputFile,stderr=errorFile,stdin=inputContent)
+                        else:
+                            subprocess.run(["./"+f.filename[:-2]+".out"],stdout=outputFile,stderr=errorFile)
                         outputFile.close()
                         with open("output.txt") as outputFile:
                             with open("ot.txt","w+") as otFile:
@@ -86,7 +100,11 @@ def success():
         if(f.filename.endswith(".py")):
             with open("output.txt","w+") as outputFile:
                 with open("error.txt","w+") as errorFile:
-                    subprocess.run(["python3",f.filename],stdout=outputFile,stderr=errorFile)
+                    if isThereAnyInputFile:
+                        with open(fi.filename,"r") as inputContent:
+                            subprocess.run(["python3",f.filename],stdout=outputFile,stderr=errorFile,stdin=inputContent)
+                    else:
+                        subprocess.run(["python3",f.filename],stdout=outputFile,stderr=errorFile)
             if os.stat("error.txt").st_size==0:
                 ot=open("output.txt").read().replace("\n","<br>")
                 return render_template("success.html",output=ot)
