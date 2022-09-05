@@ -1,8 +1,6 @@
-from time import sleep
 from flask import *
 import subprocess
 import os
-import time
 app = Flask(__name__)
 @app.route('/')
 def upload():
@@ -15,8 +13,6 @@ def sample():
 
 @app.route('/success', methods = ['POST'])
 def success():
-    #print("Got called")
-    #time.sleep(3)
     if request.method == 'POST':
         f = request.files['file']
         f.save(f.filename)
