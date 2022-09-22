@@ -45,6 +45,24 @@ def success():
                         ot=open("ot.txt","r").read().replace("\n","<br>")
                         subprocess.run(["rm","ot.txt"])
                         print(ot)
+                    elif os.stat("error.txt").st_size!=0 and open("error.txt").read().find("error:")==-1:
+                        if isThereAnyInputFile:
+                            with open(fi.filename,"r") as inputContent:
+                                subprocess.run(["./"+f.filename[:-2]+".out"],stdout=outputFile,stderr=errorFile,stdin=inputContent)
+                        else:
+                            subprocess.run(["./"+f.filename[:-2]+".out"],stdout=outputFile,stderr=errorFile)
+                        outputFile.close()
+                        with open("output.txt") as outputFile:
+                            with open("ot.txt","w+") as otFile:
+                                while(True):
+                                    m=str(outputFile.readline())
+                                    if m=="": break
+                                    otFile.write(m)
+                        subprocess.run(["rm",f.filename])
+                        subprocess.run(["rm",f.filename[:-2]+".out"])
+                        ot=open("ot.txt","r").read().replace("\n","<br>")
+                        subprocess.run(["rm","ot.txt"])
+                        print(ot)
                     else:
                         #Error Zone
                         errorFile.close()

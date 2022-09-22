@@ -1,92 +1,31 @@
-mv "1025_Divisor Game.py" "1025_Divisor_Game.py"
-mv "1074_Number of Submatrices That Sum to Target.cpp" "1074_Number_of_Submatrices_That_Sum_to_Target.cpp"
-mv "1089_Duplicate Zeros.py" "1089_Duplicate_Zeros.py"
-mv "1108_Defanging an IP Address.cpp" "1108_Defanging_an_IP_Address.cpp"
-mv "1161. Maximum Level Sum Of a Binary Tree.cpp" "1161._Maximum_Level_Sum_Of_a_Binary_Tree.cpp"
-mv "1209_Remove All Adjacent Duplicates in String II.cpp" "1209_Remove_All_Adjacent_Duplicates_in_String_II.cpp"
-mv "120_Triangle.py" "120_Triangle.py"
-mv "124. Binary Tree Maximum Path Sum.cpp" "124._Binary_Tree_Maximum_Path_Sum.cpp"
-mv "1275_Find Winner on a Tic Tac Toe Game.cpp" "1275_Find_Winner_on_a_Tic_Tac_Toe_Game.cpp"
-mv "1281_Subtract the Product and Sum of Digits of an Integer.cpp" "1281_Subtract_the_Product_and_Sum_of_Digits_of_an_Integer.cpp"
-mv "1290_Convert Binary Number in a Linked List to Integer.py" "1290_Convert_Binary_Number_in_a_Linked_List_to_Integer.py"
-mv "1295_Find Numbers with Even Number of Digits.py" "1295_Find_Numbers_with_Even_Number_of_Digits.py"
-mv "129_Sum Root to Leaf Numbers.cpp" "129_Sum_Root_to_Leaf_Numbers.cpp"
-mv "1302_Deepest_Leaves_Sum.cpp" "1302_Deepest_Leaves_Sum.cpp"
-mv "1302_Deepest Leaves Sum.py" "1302_Deepest_Leaves_Sum.py"
-mv "1313_Decompress Run_Length Encoded List.cpp" "1313_Decompress_Run_Length_Encoded_List.cpp"
-mv "1325. Delete Leaves With a Given Value.cpp" "1325._Delete_Leaves_With_a_Given_Value.cpp"
-mv "1351_Count Negative Numbers in a Sorted Matrix.py" "1351_Count_Negative_Numbers_in_a_Sorted_Matrix.py"
-mv "1365_How Many Numbers Are Smaller Than the Current Number.cpp" "1365_How_Many_Numbers_Are_Smaller_Than_the_Current_Number.cpp"
-mv "1389_Create Target Array in the Given Order.py" "1389_Create_Target_Array_in_the_Given_Order.py"
-mv "13_Roman to Integer.py" "13_Roman_to_Integer.py"
-mv "1431_Kids With the Greatest Number of Candies.cpp" "1431_Kids_With_the_Greatest_Number_of_Candies.cpp"
-mv "1448_Count Good Nodes in Binary Tree.cpp" "1448_Count_Good_Nodes_in_Binary_Tree.cpp"
-mv "1450_Number of Students Doing Homework at a Given Time.py" "1450_Number_of_Students_Doing_Homework_at_a_Given_Time.py"
-mv "1464_Maximum Product of Two Elements in an Array.py" "1464_Maximum_Product_of_Two_Elements_in_an_Array.py"
-mv "1470_Shuffle the Array.cpp" "1470_Shuffle_the_Array.cpp"
-mv "1476_Subrectangle Queries.cpp" "1476_Subrectangle_Queries.cpp"
-mv "1480_Running Sum of 1d Array.cpp" "1480_Running_Sum_of_1d_Array.cpp"
-mv "1486_XOR Operation in an Array.py" "1486_XOR_Operation_in_an_Array.py"
-mv "1512_Number of Good Pairs.cpp" "1512_Number_of_Good_Pairs.cpp"
-mv "1528_Shuffle String.cpp" "1528_Shuffle_String.cpp"
-mv "1544_Make The String Great.py" "1544_Make_The_String_Great.py"
-mv "1550_Three Consecutive Odds.cpp" "1550_Three_Consecutive_Odds.cpp"
-mv "1551_Minimum Operations to Make Array Equal.py" "1551_Minimum_Operations_to_Make_Array_Equal.py"
-mv "1603_Design Parking System.py" "1603_Design_Parking_System.py"
-mv "1662_Check If Two String Arrays are Equivalent.py" "1662_Check_If_Two_String_Arrays_are_Equivalent.py"
-mv "1672_Richest Customer Wealth.py" "1672_Richest_Customer_Wealth.py"
-mv "1678_Goal Parser Interpretation.cpp" "1678_Goal_Parser_Interpretation.cpp"
-mv "1688_Count of Matches in Tournament.py" "1688_Count_of_Matches_in_Tournament.py"
-mv "1704_Determine if String Halves Are Alike.cpp" "1704_Determine_if_String_Halves_Are_Alike.cpp"
-mv "17_Letter Combinations of a Phone Number.java" "17_Letter_Combinations_of_a_Phone_Number.java"
-mv "1812_Determine Color of a Chessboard Square.py" "1812_Determine_Color_of_a_Chessboard_Square.py"
-mv "1844_Replace All Digits with Characters.py" "1844_Replace_All_Digits_with_Characters.py"
-mv "1859_Sorting the Sentence.py" "1859_Sorting_the_Sentence.py"
-mv "1880_Check if Word Equals Summation of Two Words.py" "1880_Check_if_Word_Equals_Summation_of_Two_Words.py"
-mv "19_Remove Nth Node From End of List.py" "19_Remove_Nth_Node_From_End_of_List.py"
-mv "2089_Find Target Indices After Sorting Array.cpp" "2089_Find_Target_Indices_After_Sorting_Array.cpp"
-mv "2236_Root Equals Sum of Children.cpp" "2236_Root_Equals_Sum_of_Children.cpp"
-mv "2331_Evaluate Boolean Binary Tree.cpp" "2331_Evaluate_Boolean_Binary_Tree.cpp"
-mv "234_Palindrome Linked List.java" "234_Palindrome_Linked_List.java"
-mv "2373_Largest Local Values in a Matrix.cpp" "2373_Largest_Local_Values_in_a_Matrix.cpp"
-mv "2390_Removing Stars From a String.py" "2390_Removing_Stars_From_a_String.py"
-mv "2395_Find Subarrays With Equal Sum.cpp" "2395_Find_Subarrays_With_Equal_Sum.cpp"
-mv "2396_Strictly Palindromic Number.cpp" "2396_Strictly_Palindromic_Number.cpp"
-mv "2415_Reverse Odd Levels of Binary Tree.cpp" "2415_Reverse_Odd_Levels_of_Binary_Tree.cpp"
-mv "257_Binary Tree Paths.cpp" "257_Binary_Tree_Paths.cpp"
-mv "28_Implement strStr().py" "28_Implement_strStr().py"
-mv "329_Longest Increasing Path in a Matrix.cpp" "329_Longest_Increasing_Path_in_a_Matrix.cpp"
-mv "32_Longest Valid Parentheses.cpp" "32_Longest_Valid_Parentheses.cpp"
-mv "341_Flatten Nested List Iterator.java" "341_Flatten_Nested_List_Iterator.java"
-mv "377_Combination Sum IV.java" "377_Combination_Sum_IV.java"
-mv "383_Ransome Note.cpp" "383_Ransome_Note.cpp"
-mv "459_Repeated Substring Pattern.py" "459_Repeated_Substring_Pattern.py"
-mv "474_Ones and Zeroes.java" "474_Ones_and_Zeroes.java"
-mv "48_Rotate Image.cpp" "48_Rotate_Image.cpp"
-mv "509_Fibonacci Number.java" "509_Fibonacci_Number.java"
-mv "50_Pow(x, n).py" "50_Pow(x,_n).py"
-mv "515_Find Largest Value in Each Tree Row.cpp" "515_Find_Largest_Value_in_Each_Tree_Row.cpp"
-mv "530_Minimum Absolute Difference in BST.cpp" "530_Minimum_Absolute_Difference_in_BST.cpp"
-mv "554_Brick Wall.java" "554_Brick_Wall.java"
-mv "563_Binary_Tree_Tilt.cpp" "563_Binary_Tree_Tilt.cpp"
-mv "589_N_ary Tree Preorder Traversal.java" "589_N_ary_Tree_Preorder_Traversal.java"
-mv "606_Construct String from Binary Tree.cpp" "606_Construct_String_from_Binary_Tree.cpp"
-mv "622_Design Circular Queue.java" "622_Design_Circular_Queue.java"
-mv "637_Average of Levels in Binary Tree.cpp" "637_Average_of_Levels_in_Binary_Tree.cpp"
-mv "667_Beautiful Arrangement II.cpp" "667_Beautiful_Arrangement_II.cpp"
-mv "696_Count Binary Substrings.cpp" "696_Count_Binary_Substrings.cpp"
-mv "728_Self Dividing Numbers.py" "728_Self_Dividing_Numbers.py"
-mv "771_Jewels and Stones.py" "771_Jewels_and_Stones.py"
-mv "775_Global and Local Inversions.cpp" "775_Global_and_Local_Inversions.cpp"
-mv "783_Minimum Distance Between BST Nodes.cpp" "783_Minimum_Distance_Between_BST_Nodes.cpp"
-mv "78_subsets.cpp" "78_subsets.cpp"
-mv "814_Binary Tree Pruning.cpp" "814_Binary_Tree_Pruning.cpp"
-mv "86_Partition List.java" "86_Partition_List.java"
-mv "896_Monotonic Array.cpp" "896_Monotonic_Array.cpp"
-mv "94_Binary Tree Inorder Traversal.cpp" "94_Binary_Tree_Inorder_Traversal.cpp"
-mv "953_Verifying an Alien Dictionary.java" "953_Verifying_an_Alien_Dictionary.java"
-mv "965_Univalued Binary Tree.cpp" "965_Univalued_Binary_Tree.cpp"
-mv "977_Squares of a Sorted Array.cpp" "977_Squares_of_a_Sorted_Array.cpp"
-mv "999_Available Captures for Rook.py" "999_Available_Captures_for_Rook.py"
-
-90
+Process would be completed in 30 secs
+Process would be completed in 29 secs
+Process would be completed in 28 secs
+Process would be completed in 27 secs
+Process would be completed in 26 secs
+Process would be completed in 25 secs
+Process would be completed in 24 secs
+Process would be completed in 23 secs
+Process would be completed in 22 secs
+Process would be completed in 21 secs
+Process would be completed in 20 secs
+Process would be completed in 19 secs
+Process would be completed in 18 secs
+Process would be completed in 17 secs
+Process would be completed in 16 secs
+Process would be completed in 15 secs
+Process would be completed in 14 secs
+Process would be completed in 13 secs
+Process would be completed in 12 secs
+Process would be completed in 11 secs
+Process would be completed in 10 secs
+Process would be completed in 9 secs
+Process would be completed in 8 secs
+Process would be completed in 7 secs
+Process would be completed in 6 secs
+Process would be completed in 5 secs
+Process would be completed in 4 secs
+Process would be completed in 3 secs
+Process would be completed in 2 secs
+Process would be completed in 1 secs
+Done
