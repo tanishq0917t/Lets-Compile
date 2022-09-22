@@ -1,7 +1,0 @@
-b.c:2:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
-    2 | main()
-      | ^~~~
-b.c: In function ‘main’:
-b.c:8:1: warning: implicit declaration of function ‘sleep’ [-Wimplicit-function-declaration]
-    8 | sleep(1);
-      | ^~~~~
