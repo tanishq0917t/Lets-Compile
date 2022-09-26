@@ -7,6 +7,11 @@ def upload():
     return render_template("upload.html")
 
 
+def cleanTemp():    #Helper function to clean up dump files which are created at runtime at server end
+    subprocess.run(["rm","output.txt"])
+    subprocess.run(["rm","error.txt"])
+
+
 @app.route('/sample')
 def sample():
     return render_template("sample.html")
@@ -31,6 +36,7 @@ def success():
                         if isThereAnyInputFile:
                             with open(fi.filename,"r") as inputContent:
                                 subprocess.run(["./"+f.filename[:-2]+".out"],stdout=outputFile,stderr=errorFile,stdin=inputContent)
+                                subprocess.run(["rm",fi.filename])      #dumping up the testcase file created at server end
                         else:
                             subprocess.run(["./"+f.filename[:-2]+".out"],stdout=outputFile,stderr=errorFile)
                         outputFile.close()
@@ -49,6 +55,7 @@ def success():
                         if isThereAnyInputFile:
                             with open(fi.filename,"r") as inputContent:
                                 subprocess.run(["./"+f.filename[:-2]+".out"],stdout=outputFile,stderr=errorFile,stdin=inputContent)
+                                subprocess.run(["rm",fi.filename])      #dumping up the testcase file created at server end
                         else:
                             subprocess.run(["./"+f.filename[:-2]+".out"],stdout=outputFile,stderr=errorFile)
                         outputFile.close()
@@ -75,6 +82,7 @@ def success():
                         ot=open("ot.txt","r").read().replace("\n","<br>")
                         subprocess.run(["rm","ot.txt"])
                         subprocess.run(["rm",f.filename])
+                        cleanTemp()
                         return render_template("failure.html", output=ot)
         if(f.filename.endswith(".cpp")):
             with open("output.txt","w+") as outputFile:
@@ -84,6 +92,7 @@ def success():
                         if isThereAnyInputFile:
                             with open(fi.filename,"r") as inputContent:
                                 subprocess.run(["./"+f.filename[:-2]+".out"],stdout=outputFile,stderr=errorFile,stdin=inputContent)
+                                subprocess.run(["rm",fi.filename])      #dumping up the testcase file created at server end
                         else:
                             subprocess.run(["./"+f.filename[:-2]+".out"],stdout=outputFile,stderr=errorFile)
                         outputFile.close()
@@ -110,6 +119,7 @@ def success():
                         ot=open("ot.txt","r").read().replace("\n","<br>")
                         subprocess.run(["rm","ot.txt"])
                         subprocess.run(["rm",f.filename])
+                        cleanTemp()
                         return render_template("failure.html", output=ot)
         if(f.filename.endswith(".py")):
             with open("output.txt","w+") as outputFile:
@@ -117,15 +127,19 @@ def success():
                     if isThereAnyInputFile:
                         with open(fi.filename,"r") as inputContent:
                             subprocess.run(["python3",f.filename],stdout=outputFile,stderr=errorFile,stdin=inputContent)
+                            subprocess.run(["rm",fi.filename])      #dumping up the testcase file created at server end
                     else:
                         subprocess.run(["python3",f.filename],stdout=outputFile,stderr=errorFile)
             if os.stat("error.txt").st_size==0:
                 ot=open("output.txt").read().replace("\n","<br>")
+                cleanTemp()
                 return render_template("success.html",output=ot)
             else:
                 print("In python Error zone")
                 ot=open("error.txt").read().replace("\n","<br>")
+                cleanTemp()
                 return render_template("failure.html",output=ot)
+        cleanTemp()
         return render_template("success.html", output=ot)
 if __name__ == '__main__':
     app.run(debug = True)
