@@ -16,7 +16,13 @@ h1 {
     font-size: 2.5em;
     margin-bottom: 20px;
 }
-
+a {
+            color: white;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
 .job-list {
     list-style: none;
     padding: 0;
